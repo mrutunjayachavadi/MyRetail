@@ -51,7 +51,10 @@ Use Case :: Performs an HTTP GET to retrieve the product name from an external A
  service endpoint given
  
  Use Case :: Reads pricing information from a NoSQL data store and combines it with the product id and name from the HTTP request into a single response.
- I have used mongodb as NoSQL datastore for above use case, based on the product id price is fetched from 
+ I have used mongodb as NoSQL datastore for above use case, based on the product id, price is fetched from current_price mongoDb Table.
+ 
+ Use Case :: Accepts an HTTP PUT request at the same path (/products/{id}), containing a JSON request body similar to the GET response, and updates the product’s price in the data store
+ Price information is updated in the rdbms(postgres) current_price table
 
 Considerations for the Production Environment
 -----------------------------------------------------------------------------------------------------------------------------------------------
