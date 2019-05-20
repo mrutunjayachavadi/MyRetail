@@ -94,6 +94,7 @@ public class ProductServiceImpl implements ProductService {
             {
                 currentPrice.setCurrencyCode(currPrice.getCurrencyCode());
                 currentPrice.setValue(currPrice.getValue());
+                currentPrice.setId(currPrice.getId());
                 product.setCurrentPrice(currentPrice);
             }
             else

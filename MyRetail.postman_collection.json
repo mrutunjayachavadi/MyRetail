@@ -1,0 +1,132 @@
+{
+	"info": {
+		"name": "MyRetail",
+		"_postman_id": "d1c11178-f9e7-6036-bdeb-c9afd7f03ed6",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Product By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:8080/products/15",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"15"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Product_New11\",\n    \"currentPrice\": {\n        \"value\": 10002,\n        \"currencyCode\": \"USD\"\n    }\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/products/15",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"15"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create Products",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\n    \"name\": \"Product1\",\n    \"currentPrice\": {\n        \"value\": 100,\n        \"currencyCode\": \"USD\"\n    }\n},{\n    \"name\": \"Product2\",\n    \"currentPrice\": {\n        \"value\": 101,\n        \"currencyCode\": \"USD\"\n    }\n},{\n    \"name\": \"Product3\",\n    \"currentPrice\": {\n        \"value\": 102,\n        \"currencyCode\": \"USD\"\n    }\n},{\n    \"name\": \"Product4\",\n    \"currentPrice\": {\n        \"value\": 103,\n        \"currencyCode\": \"USD\"\n    }\n},{\n    \"name\": \"Product5\",\n    \"currentPrice\": {\n        \"value\": 104,\n        \"currencyCode\": \"USD\"\n    }\n},{\n    \"name\": \"Product6\",\n    \"currentPrice\": {\n        \"value\": 105,\n        \"currencyCode\": \"USD\"\n    }\n},{\n    \"name\": \"Product7\",\n    \"currentPrice\": {\n        \"value\": 106,\n        \"currencyCode\": \"USD\"\n    }\n},{\n    \"name\": \"Product8\",\n    \"currentPrice\": {\n        \"value\": 107,\n        \"currencyCode\": \"USD\"\n    }\n},{\n    \"name\": \"Product9\",\n    \"currentPrice\": {\n        \"value\": 108,\n        \"currencyCode\": \"USD\"\n    }\n}]"
+				},
+				"url": {
+					"raw": "localhost:8080/products/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						""
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GetProductBasedOnIdAndName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:8080/products/11/'Product_New'",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"11",
+						"'Product_New'"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product Name From External Resource",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:8080/products/name",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"name"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

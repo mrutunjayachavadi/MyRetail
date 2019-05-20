@@ -44,7 +44,7 @@ public class ProductDAOImpl implements ProductDAO {
     public Product getProductById(long id) throws MyRetailException{
         logger.info("Inside getProductById");
         try {
-            String getProductByIdQuery = "select p.id,p.name,cp.value,cp.currency from myretail.product p, "
+            String getProductByIdQuery = "select p.id as product_id,p.name,cp.id as curr_price_id,cp.value,cp.currency from myretail.product p, "
                                          + "myretail.current_price cp where p.current_price_id = cp.id and p.id = ? ;";
             logger.debug("getProductByIdQuery::"+getProductByIdQuery);
             return  jdbcTemplate.queryForObject(getProductByIdQuery, new Object[] { id }, new ProductMapper());
@@ -71,9 +71,10 @@ public class ProductDAOImpl implements ProductDAO {
         public Product mapRow(ResultSet rs, int rowNum) throws SQLException {
             Product product = new Product();
             CurrentPrice currentPrice = new CurrentPrice();
+            currentPrice.setId(rs.getLong("curr_price_id"));
             currentPrice.setValue(rs.getDouble("value"));
             currentPrice.setCurrencyCode(rs.getString("currency"));
-            product.setId(rs.getLong("id"));
+            product.setId(rs.getLong("product_id"));
             product.setName(rs.getString("name"));
             product.setCurrentPrice(currentPrice);
             logger.info(" Returning from getproductbyId");

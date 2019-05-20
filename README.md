@@ -23,8 +23,19 @@ https://medium.com/@LondonAppBrewery/how-to-download-install-mongodb-on-windows-
 Download Postgres for Windows and set up the data directory
 https://www.guru99.com/download-install-postgresql.html
 
+Download the code from the it repository : https://github.com/mrutunjayachavadi/MyRetail
+Navigate to DBScript folder, execute the contents of create.sql file contents in pgadmin console with super user postgres
+to create product and current_price tables in postgres.
 
+Navigate to MyRetail Folder in command prompt
+execute "mvn spring-boot:run" command to run the application
 
+Please find the Rest documentation at below url :
+http://localhost:8080/swagger-ui.html
+
+Also find the "MyRetail.postman_collection.json" for the rest Api documentation.
+
+Unit Test Document with the sample input and output cane be found in file "Unit_Test_Document.docx".
 
 Assumptions made for the use cases mentioned below
 -----------------------------------------------------------------------------------------------------------------------------------------------
@@ -48,6 +59,7 @@ Considerations for the Production Environment
 2. Data Validation for all the api's should be added.
 3. Exception handling  can be improved to include proper response messages for failure/erroneous scenarios.
 4. Externalization of property files like application.properties for pointing application to desired datastore.
+5. Software Excellence like junit code coverage, fanout, Cyclomatic complexity and compiler warnings.
 
 
 
