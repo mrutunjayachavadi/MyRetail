@@ -60,6 +60,7 @@ Considerations for the Production Environment
 3. Exception handling  can be improved to include proper response messages for failure/erroneous scenarios.
 4. Externalization of property files like application.properties for pointing application to desired datastore.
 5. Software Excellence like junit code coverage, fanout, Cyclomatic complexity and compiler warnings should be taken care.
+6. Automation of the installation steps can be considered for linux environment to reduce manual errors and intervention
 
 
 
