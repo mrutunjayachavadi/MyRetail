@@ -23,7 +23,7 @@ https://medium.com/@LondonAppBrewery/how-to-download-install-mongodb-on-windows-
 Download Postgres for Windows and set up the data directory
 https://www.guru99.com/download-install-postgresql.html
 
-Download the code from the it repository : https://github.com/mrutunjayachavadi/MyRetail
+Download the code from the git repository : https://github.com/mrutunjayachavadi/MyRetail
 Navigate to DBScript folder, execute the contents of create.sql file contents in pgadmin console with super user postgres
 to create product and current_price tables in postgres.
 
@@ -59,7 +59,7 @@ Considerations for the Production Environment
 2. Data Validation for all the api's should be added.
 3. Exception handling  can be improved to include proper response messages for failure/erroneous scenarios.
 4. Externalization of property files like application.properties for pointing application to desired datastore.
-5. Software Excellence like junit code coverage, fanout, Cyclomatic complexity and compiler warnings.
+5. Software Excellence like junit code coverage, fanout, Cyclomatic complexity and compiler warnings should be taken care.
 
 
 
