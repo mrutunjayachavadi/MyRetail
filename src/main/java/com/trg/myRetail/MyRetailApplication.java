@@ -9,10 +9,7 @@ import org.springframework.web.client.RestTemplate;
 @EnableAutoConfiguration
 @SpringBootApplication(scanBasePackages = "com.trg.myRetail")
 public class MyRetailApplication {
-//TO-DO
-    // Validate name for fetching price info from nosql datastore
-    //update Readme.md
-    //add comments to all important methods
+
 
 
     public static void main(String[] args) {
