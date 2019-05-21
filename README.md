@@ -36,7 +36,7 @@ http://localhost:8080/swagger-ui.html
 
 Also find the "MyRetail.postman_collection.json" for the rest Api documentation.
 
-Unit Test Document with the sample input and output cane be found in file "Unit_Test_Document.docx".
+Unit Test Document with the sample input and output can be found in file "Unit_Test_Document.docx".
 
 Assumptions made for the use cases mentioned below
 -----------------------------------------------------------------------------------------------------------------------------------------------
