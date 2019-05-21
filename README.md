@@ -24,6 +24,7 @@ Download Postgres for Windows and set up the data directory
 https://www.guru99.com/download-install-postgresql.html
 
 Download the code from the git repository : https://github.com/mrutunjayachavadi/MyRetail
+
 Navigate to DBScript folder, execute the contents of create.sql file contents in pgadmin console with super user postgres
 to create product and current_price tables in postgres.
 
