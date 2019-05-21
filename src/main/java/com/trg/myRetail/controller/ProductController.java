@@ -33,6 +33,12 @@ public class ProductController {
     
     private static final Logger logger = Logger.getLogger(ProductController.class);
 
+    /**
+     * This Method fetches the Product info on the matching product id.
+     * @param productId
+     * @return
+     * @throws MyRetailException
+     */
     @RequestMapping(value = "/products/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> getProductById(@Valid @PathVariable("id") long productId) throws MyRetailException {
         try {
@@ -48,6 +54,14 @@ public class ProductController {
         }
     }
 
+    /**
+     * 
+     * This Method updates the product price based on the product
+     * @param product
+     * @param productId
+     * @return
+     * @throws MyRetailException
+     */
     @RequestMapping(value = "/products/{id}", method = RequestMethod.PUT, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> updateProduct(@RequestBody Product product, @PathVariable("id") long productId) throws MyRetailException {
 
@@ -70,6 +84,12 @@ public class ProductController {
         }
     }
 
+    /**
+     * This Method persists the product info into database.
+     * @param products
+     * @return
+     * @throws MyRetailException
+     */
     @RequestMapping(value = "/products", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> saveProduct(@RequestBody List<Product> products) throws MyRetailException {
 
@@ -85,6 +105,13 @@ public class ProductController {
         }
     }
 
+    /**
+     * This method fetched the price info from NO-SQL store based on product id.
+     * @param productId
+     * @param productName
+     * @return
+     * @throws MyRetailException
+     */
     @RequestMapping(value = "/products/{id}/{name}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> getProductPriceBasedOnIdAndName(@PathVariable("id") long productId, @PathVariable("name") String productName) throws MyRetailException {
 
@@ -101,6 +128,11 @@ public class ProductController {
         }
     }
 
+    /**
+     * This Method fetches the product name from external endpoint
+     * @return
+     * @throws MyRetailException
+     */
     @RequestMapping(value = "/products/name", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> getProductName() throws MyRetailException {
 

@@ -55,7 +55,7 @@ Use Case :: Performs an HTTP GET to retrieve the product name from an external A
  
  Use Case :: Accepts an HTTP PUT request at the same path (/products/{id}), containing a JSON request body similar to the GET response, and updates the product’s price in the data store
  
- Price information is updated in the rdbms(postgres) current_price table
+ Price information is updated in the rdbms(postgres) current_price table, no updates are done to NO-SQL(MongoDB) data store
 
 Considerations for the Production Environment
 -----------------------------------------------------------------------------------------------------------------------------------------------
@@ -64,7 +64,7 @@ Considerations for the Production Environment
 3. Exception handling  can be improved to include proper response messages for failure/erroneous scenarios.
 4. Externalization of property files like application.properties for pointing application to desired datastore.
 5. Software Excellence like junit code coverage, fanout, Cyclomatic complexity and compiler warnings should be taken care.
-6. Automation of the installation steps can be considered for linux environment to reduce manual errors and intervention
+6. Automation of the installation steps can be considered for linux environment to reduce errors and manual intervention.
 
 
 
